@@ -33,19 +33,19 @@
 	}).addTo(mymap);
 
 	L.marker([52.495196, 13.387149]).addTo(mymap)
-		.bindPopup("<b>Dragonerareal!</b><br />I am a popup.").openPopup();
+		.bindPopup("<b>Dragonerareal!</b><br />I am a popup.");
 
-	L.circle([51.508, 13.40], 500, {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5
-	}).addTo(mymap).bindPopup("I am a circle.");
+	//L.circle([51.508, 13.40], 500, {
+	//	color: 'red',
+	//	fillColor: '#f03',
+	//	fillOpacity: 0.5
+	//}).addTo(mymap).bindPopup("I am a circle.");
 
-	L.polygon([
-		[52.495196, 13.38],
-		[52.495196, 13.36],
-		[52.51, 13.38]
-	]).addTo(mymap).bindPopup("I am a polygon.");
+	//L.polygon([
+	//	[52.495196, 13.38],
+	//	[52.495196, 13.36],
+	//	[52.51, 13.38]
+	//]).addTo(mymap).bindPopup("I am a polygon.");
 
 
 	var popup = L.popup();

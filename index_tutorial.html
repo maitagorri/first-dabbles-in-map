@@ -25,10 +25,9 @@
 
 <script>
 
-	var mymap = L.map(
-		'mapid'
-	).fitBounds([[52.4939302541,13.3838418578],[52.4965498003,13.3907904063]]);
-	
+	var mymap = L.map('mapid', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[52.4939302541,13.3838418578],[52.4965498003,13.3907904063]]);
 	
 	var basemap0 = L.tileLayer('http://a.tile.stamen.com/toner/{z}/{x}/{y}.png', {
             attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>,<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Mapdata: &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
@@ -78,16 +77,16 @@
             }
         }
 	
-	map.createPane('pane_Dragoner_0');
-        map.getPane('pane_Dragoner_0').style.zIndex = 400;
-        map.getPane('pane_Dragoner_0').style['mix-blend-mode'] = 'normal';
+	mymap.createPane('pane_Dragoner_0');
+        mymap.getPane('pane_Dragoner_0').style.zIndex = 400;
+        mymap.getPane('pane_Dragoner_0').style['mix-blend-mode'] = 'normal';
         var layer_Dragoner_0 = new L.geoJson(json_Dragoner_0, {
             attribution: '<a href=""></a>',
             pane: 'pane_Dragoner_0',
             onEachFeature: pop_Dragoner_0,
             style: style_Dragoner_0_0,
         });
-        map.addLayer(layer_Dragoner_0);
+        mymap.addLayer(layer_Dragoner_0);
 	
 	
 	var popup = L.popup();
